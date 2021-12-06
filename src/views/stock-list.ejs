@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock</title>
+    <!--BOOTSTRAP CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"></head>
+
+    <!-- FONTAWEBSOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+
+    <body>
+
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <a href="#" class="navbar-brand"> Fabrica de quesos</a>
+        <a href="/curado" class="navbar-brand"> Curado</a>
+        <a href="/stock" class="navbar-brand"> Stock</a>
+        <a href="/logout" class="navbar navbar-dark"> Cerrar Sesión</a>
+    </nav>
+
+    <style>
+        body {
+            background: #FC354C;
+            background: #FC354C;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0ABFBC, #FC354C);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    </style>
+
+<div class="container text-center">
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-md-12">
+            <div class="mb-2 d-flex justify-content-end">
+                <a href="/nuevo-registro-stock" class="btn btn-info">+ Nuevo</a>
+            </div>
+            
+        </div>
+
+        <!--LIST-->
+
+        <div class="col-md-12">
+
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4 class="card-title">STOCK</h4>
+                </div>
+            </div> 
+
+            <table class="table table-bordered table-hover table-striped table-secondary">
+                <thead>
+                    <th>N°</th>
+                    <th>N° Tanda</th>
+                    <th>Kilos</th>
+                    <th>Cantidad</th>              
+                    <th>Cantidad Vendida</th>
+                    <th>Cantidad Neta</th>
+                    <th>Precio Vta. Unitaria</th>
+                    <th>Ganancia Obtenida</th>
+                    <th>Operación</th>
+                </thead>
+
+                <tbody>
+                    <% for(var i=0; i < stock.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= i+1 %>
+                            </td>
+                            <td>
+                                <%= stock[i].tanda_num %>
+                            </td>
+                            <td>
+                                <%= stock[i].kilos %>
+                            </td>
+                            <td>
+                                <%= stock[i].cantidad %>
+                            </td>
+                            <td>
+                                <%= stock[i].venta %>
+                            </td>
+                            <td>
+                                <%= (stock[i].cantidad) - (stock[i].venta) %>
+                            </td>
+                            <td>
+                                <%= stock[i].precio_vta %>
+                            </td>
+
+                            <td>
+                                <%= (stock[i].precio_vta) * (stock[i].venta) %>
+                            </td>
+                            
+                            <td>
+                                <a href="/delete-stock/<%= stock[i]._id %>" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Borrar"><i class="fas fa-trash"></i></a>
+                                <a href="/edit-stock/<%= stock[i]._id %>" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i></a>
+                            </td>
+                        </tr>
+
+                        <% } %>
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="<%= pages[0].url %>">Primera Página</a></li>
+                    
+                <% for(var i=0; i < pages.length; i++) { %>
+                    <li class="page-item"><a class="page-link" href="<%= pages[i].url %>">
+                        <%= i + 1 %>
+                    </a></li>
+                <% } %>
+
+                    <li class="page-item"><a class="page-link" href="<%= pages[pages.length - 1].url %>">Última Página</a></li>
+                </ul>
+            </nav>
+
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producción</title>
+    <!--BOOTSTRAP CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"></head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <a href="#" class="navbar-brand"> Fabrica de quesos</a>
+        <a href="/curado" class="navbar-brand"> Curado</a>
+        <a href="/stock" class="navbar-brand"> Stock</a>
+        <a href="/logout" class="navbar navbar-dark"> Cerrar Cesion</a>
+    </nav>
+
+    <style>
+        body {
+            background: #5f2c82;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #49a09d, #5f2c82);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    </style>
+
+<div class="container">
+    <div class="row">
+        <!--FORM-->
+        <div class="col-md-5 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/edit-cur/<%= curado._id %>" method="POST"> <!--Manda los datos del formulario-->
+                        <h3>Editar Registro de Curado:</h3>
+                        <form action="/add-cur" method="POST"> <!--Manda los datos del formulario-->
+                            <div class="form-group">
+                                <label for="" class="form-label">Fecha de Ingreso al Sector de Curado:</label>
+                                <input type="date" name="fecha" class="form-control" value="<%= curado.fecha %>" >
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="form-label">N° Tanda de Fabricación:</label>
+                                <input type="number" name="tanda_num" placeholder="Número de tanda de Fabricación" class="form-control" value="<%= curado.tanda_num %>">
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="form-label">Humedad en °C:</label>
+                                <input type="number" name="humedad" placeholder="Ingresar Humedad" class="form-control" value="<%= curado.humedad %>">
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="form-label">Temperatura en °C:</label>
+                                <input type="number" name="temperatura" placeholder="Ingresar Temperatura" class="form-control" value="<%= curado.temperatura %>"> <p>°C</p>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="form-label">Fecha del Control:</label>
+                                <input type="date" name="fecha_control" class="form-control" value="<%= curado.fecha_control %>" >
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="form-label">Peso de la Tanda:</label>
+                                <input type="number" name="peso" placeholder="Ingresar peso" class="form-control" value="<%= curado.peso %>">
+                            </div>
+    
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-block">Actualizar</button>
+                            </div>
+    
+                            <div class="my-3">
+                                <a href="/curado" class="btn btn-success btn-block">Ver Lista</a>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+</body>
+</html>

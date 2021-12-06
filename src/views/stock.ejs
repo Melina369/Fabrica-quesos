@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producción</title>
+    <!--BOOTSTRAP CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"></head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <a href="#" class="navbar-brand"> Fabrica de quesos</a>
+        <a href="/curado" class="navbar-brand"> Curado</a>
+        <a href="/stock" class="navbar-brand"> Stock</a>
+        <a href="/logout" class="navbar navbar-dark"> Cerrar Cesion</a>
+    </nav>
+
+    <style>
+        body {
+            background: #FC354C;
+            background: #FC354C;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0ABFBC, #FC354C);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    </style>
+    
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Nuevo Registro de Stock</h1>
+                    <form action="/add-stock" method="POST"> <!--Manda los datos del formulario-->
+
+                        <div class="form-group">
+                            <label for="" class="form-label">N° Tanda de Fabricación:</label>
+                            <input type="number" name="tanda_num" placeholder="Número de tanda de Fabricación" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="form-label">Kilos de la Tanda:</label>
+                            <input type="number" name="kilos" placeholder="Ingresar Kilos" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="form-label">Cantidad:</label>
+                            <input type="number" name="cantidad" placeholder="Ingresar Cantidad" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="form-label">Precio Unitario de Venta:</label>
+                            <input type="number" name="precio_vta" placeholder="Ingresar Precio Unitario" class="form-control" >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="form-label">Cantidad Vendida:</label>
+                            <input type="number" name="venta" placeholder="Ingresar cantidad vendida" class="form-control">
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                        </div>
+
+                        <div class="my-3">
+                            <a href="/stock" class="btn btn-success btn-block">Ver Lista</a>
+                        </div>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

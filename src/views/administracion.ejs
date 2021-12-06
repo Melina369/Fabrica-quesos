@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <!--BOOTSTRAP CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"></head>
+
+    <!-- FONTAWEBSOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    
+    <body>
+<style>
+    body{
+        background: #3a6186;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+</style>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <a href="#" class="navbar-brand"> Fabrica de quesos</a>
+        <a href="/logout" class="navbar-brand"> Cerrar sesion</a>
+        
+    </nav>     
+<!--FORM-->
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Registro de Mantenimiento</h1> <br>
+                    <form action="/add-adm" method="POST"> <!--Manda los datos del formulario-->
+                        <div class="form-group">
+                            <label for="" class="form-label">Número:</label>
+                            <input type="number" name="numero" placeholder="Ingrese el número del equipo" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Nombre del Equipo:</label>
+                            <input type="text" name="equipo" placeholder="Ingrese el nombre del equipo" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Sistema Operativo:</label>
+                            <input type="text" name="sist_op" placeholder="Ingresar Sistema Operativo" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Diagnóstico:</label>
+                            <input type="text" name="diagnostico" placeholder="Ingrese diagnóstico" class="form-control" >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="form-label">Observaciones:</label> <br>
+                            <textarea name="observaciones" id="" cols="50" rows="5" placeholder="Descripción de las observaciones"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="form-label">Tipo de Mantenimiento de Software:</label> <br>
+
+                            <input type="radio" name="msoftware" id="soft1" value="Correctivo">
+                            <label for="soft1">Correctivo</label> <br>
+                            <input type="radio" name="msoftware" id="soft2" value="Adaptativo">
+                            <label for="soft2">Adaptativo</label> <br>
+                            <input type="radio" name="msoftware" id="soft3" value="Perfectivo">
+                            <label for="soft3">Perfectivo</label> <br>
+                            <input type="radio" name="msoftware" id="soft4" value="Preventivo">
+                            <label for="soft4">Preventivo</label> <br>
+
+                            <input type="radio" name="msoftware" id="soft5" value="NO" checked="checked">
+                            <label for="soft5">NO</label> <br>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="form-label">Tipo de Mantenimiento de Hardware:</label> <br>
+
+                            <input type="radio" name="mhardware" id="hard1" value="Correctivo">
+                            <label for="hard1">Correctivo</label> <br>
+                            <input type="radio" name="mhardware" id="hard2" value="Preventivo">
+                            <label for="hard2">Preventivo</label> <br>
+
+                            <input type="radio" name="mhardware" id="hard3" value="NO" checked>
+                            <label for="hard3">NO</label> <br>
+
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                        </div>
+
+                        <div class="my-3">
+                            <a href="/admin" class="btn btn-success btn-block">Ver Lista</a>
+                        </div>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
