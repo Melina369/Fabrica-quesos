@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "61a19827985af0749419474c"
+  },
+  "cuenta": "produccion@123.com",
+  "pass": "$2a$08$dhsxChBfyoALc/GOorLFZ.RhU9eErINrypod.vmyBA235d/gS8X7q",
+  "view": "1"
+},{
+  "_id": {
+    "$oid": "61a81e3c52613be5626ef51f"
+  },
+  "cuenta": "curado@123.com",
+  "pass": "$2a$08$nNpa8uxE/eoATaZnXOs8VeuMDzmWmquS6lKBdCM7DRr4ZfJx0vQj6",
+  "view": "2"
+},{
+  "_id": {
+    "$oid": "61a81e7552613be5626ef520"
+  },
+  "cuenta": "admin@123.com",
+  "pass": "$2a$08$ohFZiH4bsvos/QMD5N9E3uPJADNO/toUZbzUI4qNUh9u3BmyB1PyS",
+  "view": "3"
+}]

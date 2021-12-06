@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "61aa25bbe513e445eda8e98f"
+  },
+  "tanda_num": 3,
+  "fecha": "2021-12-02",
+  "humedad": 10,
+  "temperatura": 40,
+  "fecha_control": "2021-12-01",
+  "peso": 76,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aa25d8e513e445eda8e994"
+  },
+  "tanda_num": 1,
+  "fecha": "2021-12-01",
+  "humedad": 10,
+  "temperatura": 20,
+  "fecha_control": "2021-12-02",
+  "peso": 50,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aa25fbe513e445eda8e999"
+  },
+  "tanda_num": 6,
+  "fecha": "2021-12-14",
+  "humedad": 12,
+  "temperatura": 35,
+  "fecha_control": "2021-12-12",
+  "peso": 70,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aa262de513e445eda8e99e"
+  },
+  "tanda_num": 74,
+  "fecha": "2021-12-02",
+  "humedad": 10,
+  "temperatura": 50,
+  "fecha_control": "2021-12-10",
+  "peso": 60,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aa2666e513e445eda8e9a3"
+  },
+  "tanda_num": 9,
+  "fecha": "2021-11-12",
+  "humedad": 10,
+  "temperatura": 40,
+  "fecha_control": "2021-12-12",
+  "peso": 15,
+  "__v": 0
+}]

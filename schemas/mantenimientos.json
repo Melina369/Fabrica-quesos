@@ -1,0 +1,53 @@
+[{
+  "_id": {
+    "$oid": "61aa286ce513e445eda8e9bb"
+  },
+  "numero": 12,
+  "equipo": "PC-12",
+  "sist_op": "Windows 10",
+  "diagnostico": "Disco duro viejo",
+  "solucion": false,
+  "observaciones": "Necesita reparaciones",
+  "mhardware": "Correctivo",
+  "msoftware": "Preventivo",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aa28f7e513e445eda8e9c0"
+  },
+  "numero": 5,
+  "equipo": "PC-5",
+  "sist_op": "Windows xp",
+  "diagnostico": "Windows viejo",
+  "solucion": true,
+  "observaciones": "Actualizar el sistema operativo",
+  "mhardware": "NO",
+  "msoftware": "Adaptativo",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aa2b1ae513e445eda8e9c7"
+  },
+  "numero": 6,
+  "equipo": "PC-6",
+  "sist_op": "Windows 10",
+  "diagnostico": "Antivirus desactualizado",
+  "solucion": false,
+  "observaciones": "se encontro una version vieja del antivirus ",
+  "mhardware": "Preventivo",
+  "msoftware": "Correctivo",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aa2b71e513e445eda8e9d0"
+  },
+  "numero": 8,
+  "equipo": "PC-8",
+  "sist_op": "Windows 10",
+  "diagnostico": "Falta de controladores",
+  "solucion": false,
+  "observaciones": "Al realizar un diagnostico se encontró que la maquina no tiene los controladores para diferentes funciones",
+  "mhardware": "Correctivo",
+  "msoftware": "Perfectivo",
+  "__v": 0
+}]
